@@ -13,7 +13,47 @@
 // console.log("The sum of numbers is: " + sum)
 
 
+
+
+
+
+
+
 // Number 2, create a length converter function
+
+
+// function converterOfLength(number, convertUnits, toUnit) {
+//     let convertUnit = {
+//         meter: {
+//             centimeter: 100,
+//             kilometer: 0.001,
+//             meter: 1
+//         },
+//         centimeter: {
+//             meter: 0.01,
+//             kilometer: 0.00001,
+//             centimeter: 1
+//         },
+//         kilometer: {
+//             kilometer: 1,
+//             meter: 1000,
+//             centimeter: 100000
+//         }
+//     };
+
+   
+//     return number * convertUnit[convertUnits][toUnit];
+// }
+// console.log(converterOfLength(10, 'meter', 'centimeter')  + 'cm' )
+// console.log(converterOfLength(50, 'kilometer', 'meter') + 'm')
+// console.log(converterOfLength(8000, 'meter', 'kilometer')  + 'km' )
+// console.log(converterOfLength(8, 'kilometer', 'centimeter') + 'cm')
+// console.log(converterOfLength(70, 'meter', 'meter')  + 'm' )
+// console.log(converterOfLength(500, 'kilometer', 'kilometer') + 'km')
+// console.log(converterOfLength(80, 'centimeter', 'kilometer') + 'km')
+// console.log(converterOfLength(900, 'centimeter', 'meter')  + 'm' )
+// console.log(converterOfLength(1000, 'centimeter', 'centimeter') + 'cm')
+
 // function lengthConverter(value, fromUnit, toUnit) {
 //     // Conversion rates
 //     const conversionRates = {
@@ -23,7 +63,7 @@
 //             feet: 3.28084,
 //             miles: 0.000621371
 //         },
-//         kilometers: {
+//         kilometers: { 
 //             meters: 1000,
 //             kilometers: 1,
 //             feet: 3280.84,
@@ -68,6 +108,12 @@
 // // [centimeterTometer]
 // console.log(meter + 'm')
 
+
+
+
+
+
+
 // Number 3, print all even numbers from 0-100
 
 //     let Theevenones = 1
@@ -78,29 +124,118 @@
 //     } Theevenones++
 // }
 
+
+
+
+
 // Number 4, print a table containing multiplication tables
 
-function printMultiplicationTable() {
-    let table = '';
+// function printMultiplicationTable() {               
+//     let table = '';
 
-    // Create the header row
-    table += '   ';
-    for (let i = 1; i <= 10; i++) {
-        table += i.toString().padStart(4, ' ');
+//     // Create the header row
+//     table += '   ';
+//     for (let i = 1; i <= 10; i++) {
+//         table = table + i.toString().padStart(4, ' ');
+//     }
+//     table += '\n';
+
+//     // Create the multiplication table row
+//     for (let i = 1; i <= 10; i++) {
+//         table += i.toString().padStart(2, ' ') + ' ';
+//         for (let j = 1; j <= 10; j++) {
+//             table += (i * j).toString().padStart(4, ' ');
+//         }
+//         table += '\n';
+//     }
+
+//     console.log(table);
+// }
+
+// // Call the function to print the multiplication table
+// printMultiplicationTable();
+
+
+
+// Number 5, Create a function that reverse an array
+function reverseAnArray(abdul) {
+    let reversedAbdul = [];
+    for (let num = abdul.length - 1; num >= 0; num--) {
+        reversedAbdul.push(abdul[num]);
     }
-    table += '\n';
-
-    // Create the multiplication table rows
-    for (let i = 1; i <= 10; i++) {
-        table += i.toString().padStart(2, ' ') + ' ';
-        for (let j = 1; j <= 10; j++) {
-            table += (i * j).toString().padStart(4, ' ');
-        }
-        table += '\n';
-    }
-
-    console.log(table);
+    return reversedAbdul;
 }
 
-// Call the function to print the multiplication table
-printMultiplicationTable();
+// Example usage
+let mainArray = [1, 2, 3, 4, 5];
+let reversedAbdul = reverseAnArray(mainArray);
+console.log(reversedAbdul); // Output: [5, 4, 3, 2, 1]
+
+// Number 6, Sort an array of strings in alphabetical order
+// Create an array of strings
+let stringsArray = ["banana", "apple", "cherry", "date", "elderberry"];
+
+// Sort the array in alphabetical order
+stringsArray.sort();
+
+// Log the sorted array to the console
+console.log(stringsArray); // Output: ["apple", "banana", "cherry", "date", "elderberry"]
+
+
+// Number 7, Sort an array of numbers in descending order
+// Create an array of numbers
+let numbersArray = [10, 5, 8, 1, 7, 3, 9];
+
+// Sort the array in descending order
+numbersArray.sort(function(a, b) {
+    return b - a;
+});
+
+// Log the sorted array to the console
+console.log(numbersArray); // Output: [10, 9, 8, 7, 5, 3, 1]
+
+
+// Number 8, return a boolean if a number is divisible by 10.
+function isDivisibleBy10(number) {
+    return number % 10 === 0;
+}
+
+// Example usage
+console.log(isDivisibleBy10(20)); // Output: true
+console.log(isDivisibleBy10(25)); // Output: false
+
+
+// Number 9, Return the number of vowels in a string
+function countVowels(str) {
+    // Define a string containing all vowels
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+
+    // Loop through each character in the string
+    for (let i = 0; i < str.length; i++) {
+        // Check if the character is a vowel
+        if (vowels.includes(str[i])) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// Example usage
+let exampleString = "Hello, World!";
+console.log(countVowels(exampleString)); // Output: 3
+
+
+
+// Nunmber 10, create a function that filters out negative numbers
+// function filterNegativeNumbers(arr) {
+//     return arr.filter(function(number) {
+//         return number >= 0;
+//     });
+// }
+
+// // Example usage
+// let numbersArray = [10, -5, 8, -1, 7, -3, 9];
+// let positiveNumbersArray = filterNegativeNumbers(numbersArray);
+// console.log(positiveNumbersArray); // Output: [10, 8, 7, 9]
