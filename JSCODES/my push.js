@@ -144,10 +144,10 @@ console.log(vowelsCount(counts))
 
 // Nunmber 10, create a function that filters out negative numbers
 function negativeNumbers (abdul){
-    return abdul.filter (function(number){
-        number <= 0
+    return abdul.filter(function(number){
+        return number <= 0
     })
 }
-let numbers = [1, -5, -6, -0, 9, 8, 6, ]
+let numbers = [1, -5, -6, -0, 9, 8, 6, -10]
 let allnegativeNumbers = negativeNumbers(numbers)
 console.log(allnegativeNumbers)
